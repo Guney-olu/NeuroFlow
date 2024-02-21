@@ -7,6 +7,10 @@ from NeuroEngine.visualize import visualize_neural_network
 import numpy as np
 
 ```python
+from NeuroEngine.nn_architecture import NeuralNetwork
+from NeuroEngine.visualize import visualize_neural_network
+import numpy as np
+
 # Create synthetic data
 X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 y = np.array([[0], [1], [1], [0]])
