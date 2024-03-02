@@ -10,6 +10,43 @@ from NeuroEngine.visualize import visualize_neural_network
 import numpy as np
 
 ```python
+# Using Neuroflow tensors
+from NeuroEngine.tensor.tensors import Tensor
+
+tensor1 = Tensor([1, 2, 3])
+tensor2 = Tensor([4, 5, 6])
+
+result = tensor1 + tensor2
+
+print(result.data)
+
+x = Tensor.empty(3, 4)
+print("Tensor with zeros:")
+print(x.data)
+
+zeros = Tensor.zeros(2, 3)
+print("Tensor with zeros:")
+print(zeros)
+
+ones = Tensor.ones(2, 3)
+print("Tensor with ones:")
+print(ones)
+
+random_tensor = Tensor.rand(2, 3)
+print("Random Tensor:")
+print(random_tensor)
+
+# All operations are also supported 
+ones = Tensor.zeros(2, 2) + 1
+twos = Tensor.ones(2, 2) * 2
+threes = (Tensor.ones(2, 2) * 7 - 1) / 2
+fours = twos ** 2
+sqrt2s = twos ** 0.5
+
+```
+
+
+```python
 from NeuroEngine.nn_architecture import NeuralNetwork
 from NeuroEngine.visualize import visualize_neural_network
 import numpy as np
